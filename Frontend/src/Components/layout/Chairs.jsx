@@ -155,6 +155,7 @@ const Chairs = () => {
               ))}  */}
 
       {/* <CircularProgress /> */}
+      <Footer/>
     </>
   );
 };

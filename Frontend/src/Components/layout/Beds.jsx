@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../../style/product.css";
 import ProductCard from "../ProductList/ProductCard";
-import Footer from "../Footer/Footer";
 import { Button, CircularProgress } from "@mui/material";
 import MetaData from "../layout/MetaData";
 import Pagination from "react-js-pagination";
 import {  getProductByCategory } from "../../Redux/Product/product_action";
 import { useSelector, useDispatch } from "react-redux";
+import Footer from "../Footer/Footer";
 import {
   PaginationWrapper,
   ProductCardList,
@@ -155,6 +155,7 @@ const Beds = () => {
               ))}  */}
 
       {/* <CircularProgress /> */}
+      <Footer/>
     </>
   );
 };

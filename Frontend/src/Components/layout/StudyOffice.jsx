@@ -155,6 +155,7 @@ const StudyOffice = () => {
               ))}  */}
 
       {/* <CircularProgress /> */}
+      <Footer/>
     </>
   );
 };

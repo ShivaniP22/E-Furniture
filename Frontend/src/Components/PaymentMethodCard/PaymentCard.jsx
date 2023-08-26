@@ -50,6 +50,11 @@ export const PaymentsCard = () => {
           </button>
 
           <button className="patmentBox">
+            <img src={GiftCard} alt="" />
+            <div>PEPPERFRY GIFT CARD</div>
+          </button>
+
+          <button className="patmentBox">
             <img src={UPI} alt="" />
             <div>GOOGLE PAY/UPI</div>
           </button>

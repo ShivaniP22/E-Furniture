@@ -77,7 +77,15 @@ const Price = ({cart}) => {
               <div> ₹ 0 </div>
             </div>
 
+            <div className="cardDisplay">
+              <div>Assembly</div>
+              <div>₹ 1500</div>
+            </div>
 
+            <div className="cardDisplay">
+              <div>GiveIndia</div>
+              <div>₹ 99</div>
+            </div>
           </div>
 
           <Hr />
