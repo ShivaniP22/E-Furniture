@@ -21,7 +21,7 @@ export const getProduct =
         }`
       )
       //?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}
-      // https://backend-mhwg.onrender.com
+      // http://localhost:9000
 
       dispatch({
         type: ALL_PRODUCT_SUCCESS,
@@ -45,7 +45,7 @@ export const getProduct =
         `http://localhost:9000/api/v1/productsByCategory?category=${category}`
       );
       //?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}
-      // https://backend-mhwg.onrender.com
+      // http://localhost:9000
 
       dispatch({
         type: ALL_PRODUCT_SUCCESS,

@@ -80,14 +80,14 @@ const CheckoutFooter = () => {
               src="https://ii1.pepperfry.com/images/svg/calendar-1.svg"
               alt=""
             />
-            <div>
+            {/* <div>
               <span>No Cost EMIs: </span> Now pay in easy installments at no
               additional cost
-            </div>
+            </div> */}
           </Grid>
-          <CopyRight>
+          {/* <CopyRight>
             Copyright 2021 Pepperfry.com. All rights Reserved.
-          </CopyRight>
+          </CopyRight> */}
         </Flex>
       </div>
 
