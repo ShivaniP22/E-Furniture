@@ -43,6 +43,7 @@ const addToCartHandler = () => {
         <span className="card-original-price"> ₹{product.price}</span>
       </h4>
       <h4 className="card-savings">{product.discount_percentage}% Off</h4>
+      <h6>Ships in 1 day</h6>
     </CardWrapper>
   );
 };

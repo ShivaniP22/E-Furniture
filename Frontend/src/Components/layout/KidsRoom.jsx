@@ -155,6 +155,7 @@ const KidsRoom = () => {
               ))}  */}
 
       {/* <CircularProgress /> */}
+      <Footer/>
     </>
   );
 };

@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export const ProductListContainer = styled.div`
   display: flex;
-  flex-direction: row;
 
   .heading {
     text-align: center;
@@ -27,19 +26,10 @@ export const ProductListContainer = styled.div`
     transition: color 1s, border 1s;
   }
 
-  .sort {
-    margin-left: 130px;
-    margin-top: 70px;
-  }
 
-  .filter {
-    width: 25%;
-    font-weight: 800;
-    font-size: large;
-    border: 0.1px solid gray;
-    border-bottom: 0;
-  }
 `;
+
+
 
 
 
@@ -120,7 +110,11 @@ export const ProductCardList = styled.div`
   border-left: 0;
   padding: 1%;
   margin-bottom: 100px;
+  margin-left: 50%;
   grid-gap: 1%;
+  margin-left: 130px;
+  margin-top: 70px;
+
 `;
 
 

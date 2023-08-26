@@ -155,6 +155,7 @@ const Decor = () => {
               ))}  */}
 
       {/* <CircularProgress /> */}
+      <Footer/>
     </>
   );
 };

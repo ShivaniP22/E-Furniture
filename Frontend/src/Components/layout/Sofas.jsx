@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../../style/product.css";
 import ProductCard from "../ProductList/ProductCard";
-import Footer from "../Footer/Footer";
 import { Button, CircularProgress } from "@mui/material";
 import MetaData from "../layout/MetaData";
 import Pagination from "react-js-pagination";
 import {  getProductByCategory } from "../../Redux/Product/product_action";
 import { useSelector, useDispatch } from "react-redux";
+import Footer from "../Footer/Footer";
 import {
   PaginationWrapper,
   ProductCardList,
@@ -21,15 +21,14 @@ const Sofas = () => {
 
   const [brand, setBrand] = React.useState("");
   const [prices, setPrice] = React.useState(50000);
-  const [category, setCategory] = React.useState("Sofas");
-
   const [currentPage, setCurrentPage] = useState(1);
+  const [category, setCategory] = React.useState("Sofas");
 
   console.log(productsCount)
 
   useEffect(() => {
     dispatch(getProductByCategory(currentPage, category));
-  }, [dispatch, currentPage,category]);
+  }, [dispatch, currentPage, category]);
 
   const setCurrentPageNo = (e) => {
     setCurrentPage(e);
@@ -156,6 +155,7 @@ const Sofas = () => {
               ))}  */}
 
       {/* <CircularProgress /> */}
+      <Footer/>
     </>
   );
 };

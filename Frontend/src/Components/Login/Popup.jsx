@@ -6,7 +6,7 @@ import "./popup.css"
 function Popup (props){
   return (
     <>
-    <MainLogin/>
+    
     </>
   )
 }

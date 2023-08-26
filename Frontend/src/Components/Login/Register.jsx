@@ -10,9 +10,9 @@ export const Register = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { error, loading, isAuthenticated } = useSelector(
-    (state) => state.user
-  );
+  // const { error, loading, isAuthenticated } = useSelector(
+  //   (state) => state.user
+  // );
 
   const[nvalid,setnvalid]=useState("");
   const[evalid,setevalid]=useState("");
@@ -42,7 +42,7 @@ export const Register = (props) => {
       
         const { name, value } = e.target;
         
-        setFormData({ ...formData, [name]: value});
+        setFormData({ ...formData, [name]: value.trim() });
       
       
     };
@@ -51,25 +51,16 @@ export const Register = (props) => {
     const handleSubmit = (e) => {
       e.preventDefault();
       console.log("IN LOGIN")
-      const pattern = /^\d{10}$/;
-    
-      
-
-      
-      
 
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
 
-     
-        var raw = JSON.stringify({
-          name: name,
-          email: email,
-          mobileNumber: mobileNumber,
-          password: password,
-        });
-      
-      
+      var raw = JSON.stringify({
+        name: name,
+        email: email,
+        mobileNumber: mobileNumber,
+        password: password,
+      });
 
       var requestOptions = {
         method: "POST",
@@ -82,47 +73,26 @@ export const Register = (props) => {
         .then((response) => response.json())
         .then((data) =>{
                 if (data) {
-                  
-                 
-                  
                   if (data.success) {
-                  if(pattern.test(mobileNumber)==true)
-                  {
+                   
                     setnvalid( setnvalid(<span style={{color:"blue",fontSize:"13px"}}>Registration successful</span>))
                     props.setTrig(false);
                     setisAuthenticated = true;
-                    console.log("IN DATA save")
-                    
-
-                  }else{
-                      setmvalid("Enter Valid mobile Number")
-                    }
-                   
                   } else {
                    
-                   console.log(data)
-                    if(data.message.includes("Please Enter Your Name")||data.message.includes("name"))
+                    // console.log(data.message)
+                    if(data.message.includes("Please Enter Your Name"))
                       setnvalid(<span style={{color:"red",fontSize:"13px"}}>Please Enter Your Name</span>)
-                      else
-                      setnvalid("")
                       if(data.message.includes("Please Enter Your Mobile Number"))
                       setmvalid("Please Enter Your Mobile Number")
-                     else setmvalid("")
                       if(data.message.includes("Please Enter Your Email"))
                       setevalid("Please Enter Your Email")
-                      else setevalid("")
                       if(data.message.includes("Please Enter Your Password"))
                       setpvalid("Please Enter Your Password")
-                      else setpvalid("")
-
-
-                       setnvalid(<span style={{color:"red",fontSize:"13px"}}>{data.message}</span>)
                   }
-                
                 }
         })
         .catch((error) => console.log("error", error));
-      
     };
 
 
@@ -148,7 +118,7 @@ export const Register = (props) => {
             <span style={{color:"red",fontSize:"13px"}}>{mvalid}</span>
             <br />
             
-            <label htmlFor="number"  >Mobile Number</label>
+            <label htmlFor="number">Mobile Number</label>
             <br />
             <input
               value={mobileNumber}
