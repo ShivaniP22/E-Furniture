@@ -11,11 +11,12 @@ import EMI from "../../Images/PaymentIcons/emi.svg";
 import Money from "../../Images/PaymentIcons/money.svg";
 import { PaymentCardContainer, PaymentCardParent, PaymentDiv } from "./PaymentMethodCSS";
 import { Payment } from "./Payment";
-
+import {useSelector} from "react-redux";
 
 
 export const PaymentsCard = () => {
 
+ 
   return (
     <PaymentCardContainer>
       <div className="heading">
@@ -24,7 +25,7 @@ export const PaymentsCard = () => {
       <PaymentDiv>
         
         <PaymentCardParent>
-          <button className="patmentBox">
+          {/* <button className="patmentBox">
             <img src={debit} alt="" />
             <div>ATM/DEBIT CARD</div>
           </button>
@@ -67,6 +68,10 @@ export const PaymentsCard = () => {
           <button className="patmentBox">
             <img src={International} alt="" />
             <div>INTERNATIONAL CARDS</div>
+          </button> */}
+          <button className="patmentBox">
+            <img src={International} alt="" />
+            <div>Cash On Delivery</div>
           </button>
         </PaymentCardParent>
         

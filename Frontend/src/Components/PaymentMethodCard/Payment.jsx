@@ -30,7 +30,7 @@ const Payment = () => {
 
   return (
     <PaymentOPtionContainer>
-      <h4 className="chooseCard-heading">CHOOSE YOUR DEBIT CARD</h4>
+      {/* <h4 className="chooseCard-heading">CHOOSE YOUR DEBIT CARD</h4>
       <FlexP>
         <div className="ImageDIv">
           <Radio />
@@ -64,7 +64,7 @@ const Payment = () => {
           />
         </div>
 
-      </FlexP>
+      </FlexP> */}
 
       {/* <CardDetails>
         <form>

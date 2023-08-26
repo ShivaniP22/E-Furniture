@@ -12,9 +12,10 @@ import {AddressInput} from './AddressInput'
 
 
 const MainAddress = () => {
+
+
   return (
     <>
-     <CheckoutNavbar />
     <AdressContainer>
       <LeftDiv>
         <OrderSummery />
@@ -27,7 +28,7 @@ const MainAddress = () => {
           <Price />
         </PriceDiv>
 
-        <Emi>
+        {/* <Emi>
           <p>
             No Cost EMI Available starting <span>₹ 2,316/month.</span> EMI
             Starting <span> ₹ 655/month </span>
@@ -36,7 +37,7 @@ const MainAddress = () => {
 
         <CheckBoxDiv className="chekboxAddress">
           <Checkbox /> Contribute Rs.99 For COVID Relief Through GiveIndia.
-        </CheckBoxDiv>
+        </CheckBoxDiv> */}
       </RightDiv>
     </AdressContainer>
 

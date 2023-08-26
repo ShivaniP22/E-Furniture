@@ -22,7 +22,6 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const MainCheckout = () => {
   return (
     <div>
-      <CheckoutNavbar />
 
       <ChekoutContainer>
         <LeftDiv>
