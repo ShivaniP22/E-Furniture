@@ -59,22 +59,22 @@ const MainCheckout = () => {
             <Price />
           </PriceDiv>
 
-          <Emi>
+          {/* <Emi>
             <p>
               No Cost EMI Available starting <span>₹ 2,316/month.</span> EMI
               Starting <span> ₹ 655/month </span>
             </p>
-          </Emi>
+          </Emi> */}
 
-          <CheckBoxDiv className="chekboxAddress">
+          {/* <CheckBoxDiv className="chekboxAddress">
             <Checkbox /> Contribute Rs.99 For COVID Relief Through GiveIndia.
-          </CheckBoxDiv>
+          </CheckBoxDiv> */}
 
           <BankOffer>BANK OFFERS</BankOffer>
 
           <div>
             <Secur>100% SAFE & SECURE</Secur>
-            <Flex>
+            {/* <Flex>
               <div>
                 <img
                   src="https://ii2.pepperfry.com/images/download-1.png"
@@ -87,7 +87,7 @@ const MainCheckout = () => {
                   alt=""
                 />
               </div>
-            </Flex>
+            </Flex> */}
           </div>
         </RightDiv>
       </ChekoutContainer>

@@ -48,7 +48,7 @@ const CartCards = () => {
         cartItems.map((item) => (
           <CardContainer>
             <CardLeft>
-              <img src={item.image[0]} alt="" />
+              <img src={item.image} alt="" />
               <div> only {item.stock} left</div>
             </CardLeft>
 
@@ -65,31 +65,11 @@ const CartCards = () => {
                   <CalendarMonthIcon className="calenderIcon" />
                   <span> Delivery By</span>
                 </div>
-                <p>Tue, 26 Apr</p>
+                <p>Wed, 30 Aug</p>
                 <p>Charges FREE For Today</p>
               </div>
               <br />
 
-              <div className="spanItem">
-                <div className="flexset">
-                  <BsLayers className="calenderIcon" />
-                  <span>Assembly</span>
-                </div>
-                <p>Offered By Pepperfry</p>
-                <p>Charges ₹ 449 </p>
-              </div>
-
-              <br />
-              <div>
-                <Flex>
-                  <img className="Safeitemsimg" src={safe} alt="" />
-                  <div className="Safeitems">
-                    <Orange> Full Furniture Protection </Orange>
-                    <p>For Only ₹ 1,834</p>
-                    <p>Learn More?</p>
-                  </div>
-                </Flex>
-              </div>
             </CardMid>
 
             <CardRight>
