@@ -45,12 +45,6 @@ export const register =
       dispatch({ type: REGISTER_USER_SUCCESS, payload: data.user });
     } catch (error) {
       return { error };
-      // dispatch({
-      //   type: REGISTER_USER_FAIL,
-      //   payload: error.response.data.message,
-      // });
-
-      //http://localhost:8000/api/v1/user/register
     }
   };
 
@@ -62,11 +56,5 @@ export const register =
       dispatch({ type: LOGOUT_SUCCESS });
     } catch (error) {
       return { error };
-      // dispatch({
-      //   type: REGISTER_USER_FAIL,
-      //   payload: error.response.data.message,
-      // });
-
-      //http://localhost:8000/api/v1/user/register
     }
   };

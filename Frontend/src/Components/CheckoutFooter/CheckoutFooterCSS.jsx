@@ -25,6 +25,8 @@ export const Flex = styled.div`
 
   & img {
     margin-right: 10px;
+    width:100px;
+    height:60px;
   }
   & div {
     padding: 2px;
@@ -40,38 +42,7 @@ export const FooterText = styled.span`
 
 `;
 
-export const Wallet = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
-`;
 
-export const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 20%, 80%;
-  grid-template-areas: "a b";
-
-  & img {
-    grid-area: "a";
-  }
-
-  & div {
-    grid-area: "b";
-    margin-top: -15px;
-    font-weight: 450;
-    font-size: 12px;
-    color: #969696;
-    font-family: Manrope, sans-serif;
-  }
-
-  & div > span {
-    font-weight: 600;
-  }
-
-`;
 
 export const CopyRight = styled.p`
   font-size: 14px;
@@ -97,5 +68,6 @@ export const FooterHeader = styled.div`
   line-height: 19px;
   padding-bottom: 15px;
  margin-top: -40px;
+ margain
 }
 `;

@@ -35,7 +35,6 @@ function CardPayment(){
 
     let totalPrice = price - discount;
     console.log(totalPrice);
-    // console.log(withoutOfferprice, totalPrice, totaldiscount);
 
     setTotalItem(items);
     setPrice(price);
@@ -74,7 +73,6 @@ const addToDb=()=>{
     console.log(response.data);
   });
   
-// console.log("AddressITEM="+addItems)
 console.log(cartItems)
 }
 
@@ -84,7 +82,6 @@ console.log(cartItems)
           <div className={styles.leftDiv}>
             <div className={styles.leftDiv1}>
               <Link to="">
-                {/* LINK THE BACK ARROW TO THE PREVIOUS BACK HERE */}
                 <div className={styles.leftDiv11}>
                   <ArrowBackOutlinedIcon className={styles.lefrarrow} />
                   <p className={styles.left11p}>BACK</p>
@@ -103,7 +100,6 @@ console.log(cartItems)
               <div className={styles.leftDiv3}>
                 <p className={styles.leftDiv3p}>
                   Total Payable Amount <span>₹ {totalPrice} </span>{" "}
-                  {/* ADD TOTAL AMOUNT HERE IN THE SPAN */}
                 </p>
               </div>
               <div className={styles.leftDiv4}>
@@ -172,7 +168,6 @@ console.log(cartItems)
                       PROCEED
                     </button>
                   </Link>
-                  {/* LINK THIS TO THE NEXT PAGE AFTER CLICKING ON PROCEED BUTTON*/}
                 </form>
               </div>
             </div>

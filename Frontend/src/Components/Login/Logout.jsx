@@ -23,14 +23,6 @@ function Logout(props) {
   console.log(formData);
 
 
-  //const userData = JSON.parse(localStorage.getItem("user"));
-//   console.log(localStorage.getItem("user"));
-//   console.log(JSON.parse(localStorage.getItem("user")));
-//   console.log(userData);
-//   setFormData({ ...formData, ["name"]: userData.name});
-//   setFormData({ ...formData, ["email"]: userData.email });
-//   setFormData({ ...formData, ["mobileNumber"]: userData.mobileNumber});
-//   //setFormData(userData);
   console.log(formData);
 
   const handleSubmit = (e) => {

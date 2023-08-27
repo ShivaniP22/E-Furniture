@@ -182,3 +182,5 @@ export const PaginationWrapper = styled.div`
     color: white;
   }
 `;
+
+

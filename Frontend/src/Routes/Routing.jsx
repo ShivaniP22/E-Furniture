@@ -17,8 +17,10 @@ import Decor from '../Components/layout/Decor';
 import Chairs from '../Components/layout/Chairs';
 import StudyOffice from '../Components/layout/StudyOffice';
 import KidsRoom from '../Components/layout/KidsRoom';
-
-
+import Returnrefund from '../Components/layout/Return';
+import About from'../Components/layout/About';
+import Contact from '../Components/layout/Contact';
+import Customers from '../Components/Hero/Customers';
 
 
 
@@ -43,6 +45,14 @@ const Routing = () => {
         <Route path="/Chairs" element={<Chairs />} />
         <Route path="/StudyOffice" element={<StudyOffice />} />
         <Route path="/KidsRoom" element={<KidsRoom />} />
+        <Route path="/Returnrefund" element={<Returnrefund />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Customers" element={<Customers />} />
+
+
+
+
 
 
       </Routes>

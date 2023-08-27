@@ -32,13 +32,11 @@ const isAuthenticatedUser = async(req, res, next) => {
 
        // we need to verify the token
        const token = bearer.split("Bearer ")[1].trim();
-      //  console.log("token", token);
 
        // retrive the user if user exits then good else bad token
        let payload;
        try {
          payload = await verifyToken(token);
-        //  console.log(payload);
        } catch (error) {
          return res.status(500).json({ message: error.message });
        }
@@ -59,7 +57,6 @@ const isAuthenticatedUser = async(req, res, next) => {
            });
        }
 
-      //  console.log(user)
 
        req.user = user;
        next();

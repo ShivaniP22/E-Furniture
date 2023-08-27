@@ -41,20 +41,6 @@ export const loginReducer = (state = { user: {} }, action) => {
         error: action.payload,
       };
 
-    // case LOAD_USER_FAIL:
-    //   return {
-    //     loading: false,
-    //     isAuthenticated: false,
-    //     user: null,
-    //     error: action.payload,
-    //   };
-
-    // case LOGOUT_FAIL:
-    //   return {
-    //     ...state,
-    //     loading: false,
-    //     error: action.payload,
-    //   };
 
     default:
       return state;

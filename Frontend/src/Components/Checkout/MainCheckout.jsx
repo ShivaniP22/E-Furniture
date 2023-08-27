@@ -4,9 +4,8 @@ import { CheckoutFooter } from '../CheckoutFooter/CheckoutFooter'
 import { Flex } from '../CheckoutFooter/CheckoutFooterCSS';
 import { CheckoutNavbar } from '../CheckoutNavbar/CheckoutNavbar'
 import OrderSummery from '../OrderSummeryCard/OrderSummery';
-import { PaymentsCard } from '../PaymentMethodCard/PaymentCard';
 import Price from '../PriceCard/Price';
-import { BankOffer, ChekoutContainer, LeftDiv, PriceDiv, RightDiv, Secur } from './CheckoutCSS';
+import { BankOffer, ChekoutContainer, LeftDiv, PriceDiv, RightDiv, Secur,AlertMsg } from './CheckoutCSS';
 import { ShippingDetails } from './ShippingDetails';
 import { Button } from '../PaymentMethodCard/PaymentMethodCSS';
 import { useNavigate } from "react-router-dom";
@@ -34,7 +33,8 @@ const MainCheckout = () => {
   const [user, setUser] = useState({});
   const [address, setAddress] = useState({});
   let [orderId, setOrderId] = useState({});
-  const [messageUser, setMessageUser] = useState("We are at final stage.");
+  const [messageUser, setMessageUser] = useState("");
+  const [visible, setVisible] = useState(true);
 
 
   useEffect(() => {
@@ -54,7 +54,6 @@ const MainCheckout = () => {
 
     let totalPrice = price - discount;
     console.log(totalPrice);
-    // console.log(withoutOfferprice, totalPrice, totaldiscount);
 
     setTotalItem(items);
     setPrice(price);
@@ -70,6 +69,15 @@ const MainCheckout = () => {
 
 
   const addToDb = () => {
+    if(user == null || user == undefined || Object.keys(user).length == 0){
+      console.log(user);
+      setMessageUser("We would like to onboard you on our website. Could you please either login or register first for start your journey with us?");
+      setVisible(true);
+    } else {
+      console.log(user);
+      setVisible(false);
+
+    }
     let orderId;
     const productArray = [];
     const userData = JSON.parse(localStorage.getItem("user"));
@@ -108,75 +116,22 @@ const MainCheckout = () => {
       
           navigate("/paymentdone",{ state:DataVal});
     }).catch((error) => console.log("error", error));
-      setMessageUser("We would like to onboard you on website. Could you please either login or register first?");
     };
 
   return (
     <div>
-      <p1>{messageUser}</p1>
+      <AlertMsg visible = {{visible}}>{messageUser}</AlertMsg>
       <ChekoutContainer>
         <LeftDiv>
           <OrderSummery />
           <ShippingDetails />
-          {/* <Accordion>
-            <AccordionSummary
-              className='PaymentAcordion'
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography>How Would you Like To Pay</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                <PaymentsCard />
-              </Typography>
-            </AccordionDetails>
-          </Accordion> */}
-          {/* <div>PAYMENT</div>
-            <div>
-              <div>
-                <img src={plus} alt="plusIcon" />
-              </div>
-            </div> */}
         </LeftDiv>
 
         <RightDiv>
           <PriceDiv>
             <Price />
-          </PriceDiv>
-
-          {/* <Emi>
-            <p>
-              No Cost EMI Available starting <span>₹ 2,316/month.</span> EMI
-              Starting <span> ₹ 655/month </span>
-            </p>
-          </Emi> */}
-
-          {/* <CheckBoxDiv className="chekboxAddress">
-            <Checkbox /> Contribute Rs.99 For COVID Relief Through GiveIndia.
-          </CheckBoxDiv> */}
-
-          {/* <BankOffer>BANK OFFERS</BankOffer> */}
-
-          <div>
           <Button onClick={addToDb}> Place Order</Button>
-            {/* <Secur>100% SAFE & SECURE</Secur> */}
-            {/* <Flex>
-              <div>
-                <img
-                  src="https://ii2.pepperfry.com/images/download-1.png"
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  src="https://ii2.pepperfry.com/images/p-c-i-d-s-s.png"
-                  alt=""
-                />
-              </div>
-            </Flex> */}
-          </div>
+          </PriceDiv>
         </RightDiv>
       </ChekoutContainer>
 

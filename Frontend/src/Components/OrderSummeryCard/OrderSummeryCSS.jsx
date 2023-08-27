@@ -21,5 +21,3 @@ export const OrderContainer = styled.div`
   }
 `;
 
-  // width: 56%;
-  //   margin-left: 7.5%;

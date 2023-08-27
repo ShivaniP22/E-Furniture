@@ -34,13 +34,6 @@ export const MainLogin =(props)=>{
                 <div>
                 <button className="signup" onClick={()=>set()}>Existing User? Log In</button>
             </div>
-            {/* <div>
-                <center>
-                <span>OR Continue with</span>
-                <span><img src="https://ii1.pepperfry.com/images/social_login_fb_2x.png" alt="" className="icon"/></span>
-                <span><img src="https://ii1.pepperfry.com/images/social_login_google_2x.png" alt="" className="icon"/></span>    
-                </center>
-            </div>     */}
             </span>
         </div>
     ) : (<div className="popup">

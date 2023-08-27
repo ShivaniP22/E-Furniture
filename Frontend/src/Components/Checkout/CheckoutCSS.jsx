@@ -123,3 +123,22 @@ export const BillingDetals = styled.div`
   padding: 10px;
 `;
 
+export const AlertMsg = styled.div`
+
+ 
+    background-size: 25px;
+    border: ${props => 
+      props.visible ? '2px solid' : ''};
+      border-radius: 4px;
+      font-size: 1rem;
+      margin: 0.25rem;
+      min-width: 125px;
+      padding: 0.5rem;
+      transition: border-color 0.5s ease-out;
+      border-color: ${props => 
+        props.visible ? 'red' : 'grey'};
+      display:${props => 
+      props.visible ? 'block' : 'none'};
+   
+`;
+

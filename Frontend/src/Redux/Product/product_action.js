@@ -16,7 +16,7 @@ export const getProduct =
     try {
       dispatch({ type: ALL_PRODUCT_REQUEST });
       const { data } = await axios.get(
-        `http://localhost:9000/api/v1/products?price[lte]=${price}&price[gte]=0&${
+        `http://localhost:9000/api/v1/products?page=${currentPage}&price[lte]=${price}&price[gte]=0&${
           brand && `keyword=${brand}`
         }`
       )
@@ -42,10 +42,8 @@ export const getProduct =
     try {
       dispatch({ type: ALL_PRODUCT_REQUEST });
       const { data } = await axios.get(
-        `http://localhost:9000/api/v1/productsByCategory?category=${category}`
+        `http://localhost:9000/api/v1/productsByCategory?page=${currentPage}&category=${category}`
       );
-      //?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}
-      // http://localhost:9000
 
       dispatch({
         type: ALL_PRODUCT_SUCCESS,

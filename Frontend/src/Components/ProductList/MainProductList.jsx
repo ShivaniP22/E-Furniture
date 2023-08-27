@@ -30,13 +30,10 @@ const MainProductList = () => {
   }, [dispatch, currentPage, prices, brand]);
 
   const setCurrentPageNo = (e) => {
+    console.log(e);
     setCurrentPage(e);
   };
 
-  //  const getData = async() => {
-  //    const { data } = await axios.get("http://localhost:8000/api/v1/products");
-  //    console.log(data.product)
-  //  }
 
   return (
     <>
@@ -44,7 +41,6 @@ const MainProductList = () => {
 
       <ProductListHeading>
         <h1>Velvet Affairs</h1>
-        {/* <button className="btn-f">Furniture</button> */}
       </ProductListHeading>
 
       <br />
@@ -52,67 +48,7 @@ const MainProductList = () => {
       <ProductListContainer>
         <span className="filter">
           <div className="sort">
-            {/* <h4>Filter by</h4> */}
-            {/* <br />
-            <Button onClick={() => setBrand("")}>Clear</Button>
-            <br /> */}
-            {/* <input
-              type="radio"
-              name="money"
-              value="50000"
-              onChange={() => setPrice(50000)}
-            />
-            <label htmlFor="50,000">{" < 50,000"}</label>
-            <br />
-            <input
-              type="radio"
-              name="money"
-              value="100000"
-              onChange={() => setPrice(100000)}
-            />
-            <label htmlFor="1,00,000">{" < 1,00,000"}</label>
-            <br />
-            <input
-              type="radio"
-              name="money"
-              value="150000"
-              onChange={() => setPrice(150000)}
-            />
-            <label htmlFor="1,50,000">{" < 1,50,000"}</label>
-            <br />
-            <br />
-            <h4>Brand</h4>
-            <input
-              type="radio"
-              name="brand"
-              value="CasaCraft"
-              onChange={(e) => setBrand(e.target.value)}
-            />
-            <label htmlFor="CasaCraft"> CasaCraft</label>
-            <br />
-            <input
-              type="radio"
-              name="brand"
-              value="Woodsworth"
-              onChange={(e) => setBrand(e.target.value)}
-            />
-            <label htmlFor="Woodsworth"> Woodsworth</label>
-            <br />
-            <input
-              type="radio"
-              name="brand"
-              value="Bohemiana"
-              onChange={(e) => setBrand(e.target.value)}
-            />
-            <label htmlFor="Bohemiana"> Bohemiana</label>
-            <br />
-            <input
-              type="radio"
-              name="brand"
-              value="Stories"
-              onChange={(e) => setBrand(e.target.value)}
-            />
-            <label htmlFor="Stories"> Stories</label> */}
+            <img id="myBanner" src="https://img.freepik.com/premium-vector/modern-furniture-sale-2-color-gradient-clean-background-digital-branding-construction-social-media-instagram-post-design-template_812236-307.jpg" />
           </div>
         </span>
         {products ? <div></div> : <div>No Items</div>}
@@ -143,19 +79,6 @@ const MainProductList = () => {
         />
       </PaginationWrapper>
 
-      <Footer />
-
-      {/* {products
-              .filter((items) => {
-                if ( items.brand.toLowerCase().includes(brand.toLocaleLowerCase()) && items.price < prices) {
-                  return items;
-                }
-              })
-              .map((items) => (
-                <ProductCard key={items.id} product={items} />
-              ))}  */}
-
-      {/* <CircularProgress /> */}
     </>
   );
 };

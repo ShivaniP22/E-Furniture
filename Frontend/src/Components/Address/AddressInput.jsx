@@ -10,8 +10,6 @@ import axios from "axios";
 
 const AddressInput = () => {
   const { cartItems } = useSelector((state) => state.cart);
-//   console.log("cartItems")
-// console.log(cartItems)
 
 let initialValue = {
   name: "",
@@ -54,7 +52,6 @@ const [filled,setFilled] = useState(false)
   return (
     <AdressInputContainer>
       <Form>
-        {/* <FormLeft> */}
         <h2>Add New Shipping Address</h2>
         <div>
           <div>
@@ -63,6 +60,7 @@ const [filled,setFilled] = useState(false)
               className="name"
               type="text"
               name="name"
+              minLength={1}
               placeholder=" Enter your name "
               onChange={handleChange}
             />
@@ -74,6 +72,7 @@ const [filled,setFilled] = useState(false)
               className="mb"
               type="text"
               name="phoneNo"
+              maxLength={10}
               placeholder=" 95820XXXXX"
               onChange={handleChange}
               style={{marginLeft:"70px"}}
@@ -86,6 +85,7 @@ const [filled,setFilled] = useState(false)
               type="text"
               name="pincode"
               className="pin"
+              maxLength={6}
               placeholder="40059"
               onChange={handleChange}
             />
@@ -137,7 +137,6 @@ const [filled,setFilled] = useState(false)
             <Button onClick={handleSubmit}>SAVE & CONTINUE </Button>
        
         </div>
-        {/* </Left> */}
       </Form>
     </AdressInputContainer>
   );

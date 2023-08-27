@@ -7,7 +7,7 @@ const APIfeatures = require("../utils/apiFeatures");
 // Get All Product
 const getAllProducts = async (req, res, next) => {
   try {
-  const resultPerPage = 25;
+  const resultPerPage = 6;
   const productsCount = await Product.countDocuments()
   const apiFeatures = new APIfeatures(Product.find(),req.query).serarch().pagination(resultPerPage).filter()
   
@@ -79,7 +79,7 @@ const deleteProduct = async (req, res, next) => {
 
 const getProductByCategory = async (req, res, next) => {
   try {
-  const resultPerPage = 25;
+  const resultPerPage = 6;
   const productsCount = (await Product.find({ category: req.query.category})).length
   const apiFeatures = new APIfeatures(Product.find({ category: req.query.category}),req.query).serarch().pagination(resultPerPage).filter()
   
@@ -102,7 +102,7 @@ const getProductByCategory = async (req, res, next) => {
 };
 const getAllCategory = async (req, res, next) => {
   try {
-  const resultPerPage = 25;
+  const resultPerPage = 6;
   const productsCount = await Product.countDocuments()
   const apiFeatures = new APIfeatures(Product.find(),req.query).serarch().pagination(resultPerPage).filter()
   

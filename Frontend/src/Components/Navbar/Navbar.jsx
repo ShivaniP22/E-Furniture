@@ -53,14 +53,8 @@ const Navbar = () => {
           </div>
           <div className="iconDiv">
             <div className="iconOne">
-              <img src="https://ii1.pepperfry.com/images/svg/web21-header-help-icon.svg" alt={"help"} className="help" />
-            </div>
-            <div className="iconOne">
               <button className='log' onClick={()=>popupTrig(true)}><PermIdentityOutlinedIcon className="icon" /></button>
               <h6 style={{margin:"0%"}}></h6>
-            </div>
-            <div className="iconOne">
-              <FavoriteBorderOutlinedIcon className="icon" />
             </div>
             <div className="iconOne">
               <Link to="/cart">

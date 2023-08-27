@@ -1,6 +1,5 @@
 import React from 'react'
 import { CheckoutFooter } from '../CheckoutFooter/CheckoutFooter'
-import { CheckoutNavbar } from '../CheckoutNavbar/CheckoutNavbar'
 import CartPage from './CartPage';
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
