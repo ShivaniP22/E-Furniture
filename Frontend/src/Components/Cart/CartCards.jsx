@@ -103,7 +103,6 @@ const CartCards = () => {
                 )}
               </Orange>
 
-              {/* <div className="add">+ Add</div> */}
             </CardRight>
 
             <CardIcon>
@@ -111,9 +110,6 @@ const CartCards = () => {
                 <DeleteIcon onClick={() => deleteCartItems(item.product)} />
               </span>
 
-              {/* <span>
-                <FavoriteBorderIcon />
-              </span> */}
             </CardIcon>
           </CardContainer>
         ))}

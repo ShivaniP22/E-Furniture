@@ -42,7 +42,6 @@ function APIfeatures(query,queryString){
    queryStr = queryStr.replace(/\b(gt|gte|lt|lte)\b/g, (key) => `$${key}`); // put in inside $ symobol o/p {"price":{"$gt":"2000","$lt":"25000"}}
 
    this.query = this.query.find(JSON.parse(queryStr)); // convert to obj
-//    console.log(queryStr);
 
    return this;
 

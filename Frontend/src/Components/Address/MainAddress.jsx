@@ -20,7 +20,6 @@ const MainAddress = () => {
       <LeftDiv>
         <OrderSummery />
         <AddressInput />
-        <PaymentMethodCard />
       </LeftDiv>
 
       <RightDiv>
@@ -28,16 +27,6 @@ const MainAddress = () => {
           <Price />
         </PriceDiv>
 
-        {/* <Emi>
-          <p>
-            No Cost EMI Available starting <span>₹ 2,316/month.</span> EMI
-            Starting <span> ₹ 655/month </span>
-          </p>
-        </Emi>
-
-        <CheckBoxDiv className="chekboxAddress">
-          <Checkbox /> Contribute Rs.99 For COVID Relief Through GiveIndia.
-        </CheckBoxDiv> */}
       </RightDiv>
     </AdressContainer>
 

@@ -32,6 +32,9 @@ export const UsefulLinks = styled.div`
         font-size: 14px;
         margin-bottom: 10px;
     }
+    li:hover{
+        color: #ff7035;
+    }
 `
 
 export const NeedHelp = styled.div`
@@ -46,6 +49,9 @@ export const NeedHelp = styled.div`
         font-weight: lighter;
         font-size: 14px;
         margin-bottom: 10px;
+    }
+    li:hover{
+        color: #ff7035;
     }
 `
 export const DownloadApp = styled.div`

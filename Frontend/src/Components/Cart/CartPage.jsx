@@ -1,6 +1,5 @@
 import React,{ useState } from 'react'
 import { Link } from "react-router-dom";
-import Checkbox from "@mui/material/Checkbox";
 import { Button, CartCountHeading, CartHeader, CartLeft, CartPageWrapper, CartRight, CheckBoxDiv, CoupenDiv, Emi,  PriceContainer} from './CartCSS';
 import {Flex} from '../../Utils/Common.js'
 import  CartCards  from './CartCards';
@@ -42,35 +41,11 @@ const CartPage= () => {
     
 
           <PriceContainer>
-            {/* PriceCard */}
             <Price />
 
-            {/* <Emi>
-              <p>
-                No Cost EMI Available Starting <span> ₹ 63,184/month.</span>
-                EMI Starting <span>₹ 17,846/month</span>
-              </p>
-            </Emi> */}
           </PriceContainer>
 
           <br />
-          {/* <CheckBoxDiv>
-            <Flex>
-              <Checkbox size="large" />
-              <span>Contribute Rs.99 For COVID Relief Through GiveIndia.</span>
-            </Flex>
-
-            <Flex>
-              <Checkbox size="large" />
-              <span>
-                Use GSTIN For Business Purchase (Optional) Claim Tax Credit By
-                Entering Your Companies GSTIN.
-              </span>
-            </Flex>
-            <div className="bp">
-              None Of The Items In Your Cart Are Available For Business Purchase
-            </div>
-          </CheckBoxDiv> */}
 
           <Link to={`/address`}>
             <Button>Checkout</Button>

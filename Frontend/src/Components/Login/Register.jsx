@@ -10,9 +10,6 @@ export const Register = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // const { error, loading, isAuthenticated } = useSelector(
-  //   (state) => state.user
-  // );
 
   const[nvalid,setnvalid]=useState("");
   const[evalid,setevalid]=useState("");
@@ -81,7 +78,6 @@ export const Register = (props) => {
                     setisAuthenticated = false;
                   } else {
                    
-                    // console.log(data.message)
                     if(data.message.includes("Please Enter Your Name"))
                       setnvalid(<span style={{color:"red",fontSize:"13px"}}>Please Enter Your Name</span>)
                       if(data.message.includes("Please Enter Your Mobile Number"))

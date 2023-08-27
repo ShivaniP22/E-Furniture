@@ -1,7 +1,6 @@
 import React from 'react'
 import { PaymetMethodContainer } from './PaymentMethodCSS';
 import plus from "../../Images/plus.svg";
-import minus from "../../Images/minus.svg";
 
 function PaymentMethodCard() {
   return (

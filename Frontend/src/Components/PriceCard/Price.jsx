@@ -39,7 +39,6 @@ const Price = ({cart}) => {
   
       let totalPrice = price - discount;
 
-     // console.log(withoutOfferprice, totalPrice, totaldiscount);
 
       setTotalItem(items);
       setPrice(price);
@@ -77,15 +76,6 @@ const Price = ({cart}) => {
               <div> ₹ 0 </div>
             </div>
 
-            {/* <div className="cardDisplay">
-              <div>Assembly</div>
-              <div>₹ 1500</div>
-            </div>
-
-            <div className="cardDisplay">
-              <div>GiveIndia</div>
-              <div>₹ 99</div>
-            </div> */}
           </div>
 
           <Hr />

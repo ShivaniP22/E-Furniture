@@ -14,7 +14,6 @@ function Success() {
   const data = location.state;
   console.log(data);
     const dispatch = useDispatch();
-    //const { cartItems } = useSelector((state) => state.cart);
     const cartItemsLocal  = JSON.parse(localStorage.getItem("cartItems"));
     const deleteCartItems = (id) => {
       dispatch(removeItemsFromCart(id));

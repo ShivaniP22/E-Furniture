@@ -1,12 +1,9 @@
 import React from 'react'
-import { HomeContainer, RectangularBlock, Shop, Eyeing, Shoppee, New, HomeDecor, BlueBox, TopBrand, TwoBigImages, ImageDiv, Costumers, NeedHelpBuying  } from './HeroCSS'
+import { HomeContainer, RectangularBlock, Shop, Eyeing, Shoppee, New, HomeDecor, BlueBox, TopBrand, TwoBigImages, NeedHelpBuying  } from './HeroCSS'
 import ImageSlider from '../ImageSlider/ImageSlider'
 import { SliderData } from '../ImageSlider/SliderData';
 import kids from '../../Images/kids-4.jpeg'
-import kid from '../../Images/kids-1.jpg'
 import decor from '../../Images/decorcorner.jpg'
-import chair from '../../Images/chairs-4.jpeg'
-import decor2 from '../../Images/chairs-1.jpeg'
 import Uniquesofa from '../../Images/uniquesofa.jpg'
 import decor1 from '../../Images/decor-2.jpg'
 import A from '../../Images/a.jpeg'
@@ -16,7 +13,7 @@ import D from '../../Images/d.jpeg'
 import E from '../../Images/e.jpeg'
 import F from '../../Images/f.jpeg'
 import {Navigate, useNavigate} from 'react-router-dom'
-import Footer from '../Footer/Footer';
+import Customers from './Customers';
 
 
 
@@ -173,123 +170,7 @@ const Hero = () => {
                 <img onClick={()=>Navigate('/Sofas') } src={Uniquesofa} alt={"ShopNowOne"}/>
                 <img onClick={()=>Navigate('/Decor') } src={decor1} alt={"ShopNowTwo"}/>
             </TwoBigImages>
-            {/* <ImageDiv>
-                <img src="https://ii1.pepperfry.com/images/hp_more_from_store_bg.jpg" alt={"SofaImage"}/>
-                <div className="textDiv">
-                    <h1>More From The Store</h1><br/>
-                    <div className="lists">
-                    <div>
-                            <h3 onClick={()=>Navigate('Home') }>Home</h3>
-                            <ul>
-                                <li>Sofas</li>
-                                <li>Chairs</li>
-                                <li>Beds</li>
-                                <li>Tables</li>
-                                <li>Kids</li>
-                                <li>Home Office</li>
-                                <li>Sofa Chairs</li>
-                                <li>Decor Units</li>
-                            </ul><br />
-                            </div>
-                            <div>
-                            <h3 onClick={()=>Navigate('Sofas') }>Sofas</h3>
-                            <ul>
-                                <li>Traditional Sofas</li>
-                                <li>Camelback Sofa</li>
-                                <li>Lawson Sofa</li>
-                                <li>Tuxedo Sofa</li>
-                                <li>Family Sofas</li>
-                                <li>Sectional Sofa</li>
-                                <li>Modular Sofa</li>
-                                <li>Mid-Century Modern Sofa</li>
-
-                            </ul>
-                            <h3 onClick={()=>Navigate('Decor') }>Décor</h3>
-                            <ul>
-                                <li>Crystals</li>
-                                <li>Pinboards</li>
-                                <li>Baskets</li>
-                                <li>Glass Sculptures</li>
-                                <li>Timber Decor</li>
-                                <li>Canisters</li>
-                                <li>Dried Flowers</li>
-                                <li>Side Tables</li>
-                            </ul><br />
-                            </div>
-                            <div>
-                            <h3 onClick={()=>Navigate('Beds') }>Beds</h3>
-                                <ul>
-                                    <li>Daybed</li>
-                                    <li>Futon</li>
-                                    <li>Waterbed</li>
-                                    <li>Air Bed</li>
-                                    <li>Bookcase Bed</li>
-                                    <li>Twin Bed</li>
-                                    <li>Full Bed</li>
-                                    <li>Four-Poster Bed</li>
-                                </ul>
-                            <h3 onClick={()=>Navigate('Chairs') }>Chairs</h3>
-                                <ul>
-                                    <li>Adirondack Chair</li>
-                                    <li>Barcelona Chair</li>
-                                    <li>Cantilever Chair</li>
-                                    <li>Bentwood Chair</li>
-                                    <li>Chesterfield Chair</li>
-                                    <li>Club Chair</li>
-                                    <li>Eames Lounge Chair</li>
-                                    <li>Ghost Chair</li>
-                                </ul><br />
-                                </div>
-                                <div>
-                            <h3 onClick={()=>Navigate('KidsRoom') }>Kids-Room</h3>
-                                <ul>
-                                   <li>Kids Sofa</li> 
-                                    <li>Kids Writing Table</li>
-                                    <li>Baby Chairs</li>
-                                    <li>Kids Table</li>
-                                    <li>Painting</li>
-                                    <li>Wall Art</li>
-                                    <li>Wall Hook</li>
-                                    <li>Kids Bed</li>
-                                </ul>
-                            <h3 onClick={()=>Navigate('StudyOffice') }>Study and Office</h3>
-                            <ul>
-                                <li>Office Table</li>
-                                <li>Seater Sofa</li>
-                                <li>Work Station</li>
-                                <li>Fabric Chair</li>
-                                <li>Wall Painting</li>
-                                <li>Study Lamp</li>
-                                <li>Wall Hanging</li>
-                                <li>Office Desk</li>
-                                </ul>
-                        </div>
-                    </div>
-                </div>
-            </ImageDiv> */}
-            <Costumers>
-                <h1>Happy Costumers, Happy Us</h1>
-                <div className="customerReviews">
-                    <div onClick={()=>Navigate('Chairs') }>
-                        <img src="https://m.media-amazon.com/images/I/81xobNQM-3L._AC_UF894,1000_QL80_DpWeblab_.jpg" alt="" />
-                        <p>Bought these two blue puffy stools from E-Furniture. Found them to be surprisingly strong! Blends perfectly...</p>
-                        <div className="customerName">Pruthviraj</div>
-                        <div className="location">jaipur</div>
-                    </div>
-                    <div onClick={()=>Navigate('Chairs') }>
-                        <img src="https://m.media-amazon.com/images/S/aplus-seller-content-images-us-east-1/A21TJRUUN4KGV/A2NJPK6E0EOF1S/366bde2a-1fca-4410-8ccd-5471cd25f865._CR0,0,500,500_PT0_SX300__.jpg" alt="" />
-                        <p>I purchased Candy Study Chair in Pink Colour by Alex Daisy from E-Furniture looks awesome and My daughter...</p>
-                        <div className="customerName">Bhagyashri</div>
-                        <div className="location">Nashik</div>
-                    </div>
-                    <div onClick={()=>Navigate('Chairs') }>
-                        <img src="https://ii2.pepperfry.com/media/catalog/product/m/a/800x880/maestro-nylon-ergonomic-chair-in-black-colour-maestro-nylon-ergonomic-chair-in-black-colour-dadqtw.jpg" alt="" />
-                        <p>Purchased an ergonomic chair, I thought it would not be fitting for me but once it got delivered, got it...</p>
-                        <div className="customerName">Shivani</div>
-                        <div className="location">Ajmer</div>
-                    </div>
-                </div>
-            </Costumers>
+            <Customers/>
             <NeedHelpBuying>
                   </NeedHelpBuying>
         </HomeContainer>

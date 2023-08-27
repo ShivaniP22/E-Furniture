@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 
 const CheckoutNavbar = () => {
   var user = JSON.parse(localStorage.getItem('userData'));
-  // const name = user.name.toUpperCase();
-  // console.log(name)
 
   return (
     <>

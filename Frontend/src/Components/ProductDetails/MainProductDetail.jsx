@@ -19,19 +19,6 @@ export const MainProductDetail = () =>{
    const { product, loading, error } = useSelector((state) => state. productDetails);
    const dispatch = useDispatch();
 
-  //   const [product, setProduct] = useState([]);
-
-  // useEffect(() => {
-  //   getData()
-  // },[])
-
-  //  const getData = async() => {
-  //    const { data } = await axios.get(`/api/v1/product/${id}`);
-  //      setProduct(data.product);
-  //  }
-
-  //    console.log(product.images)
-
 
   useEffect(() => {
     dispatch(getProductDetails(id));
@@ -90,11 +77,11 @@ export const MainProductDetail = () =>{
           <a href="">EMI option</a>
           <br />
           <br />
-          {/* <img
+          <img
             className="offer"
             src="https://ii2.pepperfry.com/media/wysiwyg/banners/Promo_Web_VIPCoupon_2X_05042022_nd.jpg"
             alt=""
-          /> */}
+          />
           <br />
           <br />
           <label htmlFor="">

@@ -28,9 +28,11 @@ export const ProductListContainer = styled.div`
     transition: color 1s, border 1s;
   }
 
-  .sort {
-    margin-left: 130px;
+  #myBanner {
+    margin-left: 10px;
     margin-top: 70px;
+    max-width: 95%;
+    height: 80vh;
   }
 
   .filter {
