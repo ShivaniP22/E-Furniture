@@ -5,40 +5,78 @@ import Checkbox from "@mui/material/Checkbox"
 import {Link} from 'react-router-dom';
  import {useSelector} from "react-redux";
 import logo from "../../Images/logo.png";
-
+import axios from "axios"
 function CardPayment(){
 
-  const { cartItems } = useSelector((state) => state.cart);
-
+  
+  const cartItems  = JSON.parse(localStorage.getItem("cartItems"));
+  
+  console.log(cartItems)
   const [price, setPrice] = useState(0);
   const [totalItem, setTotalItem] = useState(0);
   const [discount, setDiscount] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
-
+  const [user, setUser] = useState({});
+  const [address, setAddress] = useState({});
   useEffect(() => {
     let items = 0;
     let price = 0;
     let discount = 0;
     let quantity = 0;
 
-    cartItems.forEach((el) => {
+    console.log()
+    cartItems.map((el) => {
       price += el.price * el.quantity;
       discount += Math.round((el.price * el.discount) / 100);
+      
     });
 
     console.log(price, discount);
 
     let totalPrice = price - discount;
-
+    console.log(totalPrice);
     // console.log(withoutOfferprice, totalPrice, totaldiscount);
 
     setTotalItem(items);
     setPrice(price);
     setDiscount(discount);
-    setTotalPrice(totalPrice + 99 + 1500);
+    setTotalPrice(totalPrice);
+    setUser( JSON.parse(localStorage.getItem("user")));
+    setAddress( JSON.parse(localStorage.getItem("shippingInfo")));
   }, [cartItems]);
+  
+
+const addToDb=()=>{
+  const productArray = [];
+  cartItems.map((el) => {
+    var product = {"product":el.product,
+                  "name":el.name,
+                  "price":el.price,
+                  "quantity":el.quantity,
+                  "image":el.image
+                  };
+    productArray.push(product);
+
+    
+  });
+ const body1 ={
+    "orderItems":productArray,
+                "user":user,
+                "addressInfo":address,
+                "totalPrice":totalPrice-discount,
+                "itemsPrice":totalPrice
 
 
+ }
+  axios
+  .post("http://localhost:9000/api/v1/order/new",body1)
+  .then((response) => {
+    console.log(response.data);
+  });
+  
+// console.log("AddressITEM="+addItems)
+console.log(cartItems)
+}
 
     return (
       <div className={styles.wrapperDiv}>
@@ -54,7 +92,7 @@ function CardPayment(){
               </Link>
               <img
                 src={logo}
-                alt="pepperfrylogo"
+                alt="mylogo"
                 className={styles.leftDiv12img}
               />
             </div>
@@ -130,7 +168,7 @@ function CardPayment(){
                     Secure this option for faster checkouts
                   </div>
                   <Link to="/paymentdone">
-                    <button type="submit" className={styles.proceedbtn}>
+                    <button onClick={addToDb} type="submit" className={styles.proceedbtn}>
                       PROCEED
                     </button>
                   </Link>

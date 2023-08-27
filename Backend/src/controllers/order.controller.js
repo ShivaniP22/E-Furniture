@@ -1,8 +1,10 @@
 const Order = require('../model/order.model')
 
 const newOrder = async(req,res,next) => {
+
+  console.log(req.body)
     try {
-    const { addressInfo, orderItems,  paymentInfo,  itemsPrice,  taxPrice, shippingPrice, totalPrice, } = req.body;
+    const { addressInfo, orderItems,  paymentInfo,  itemsPrice,  taxPrice, shippingPrice, totalPrice, user } = req.body;
             
     const order = await Order.create({
       addressInfo,
@@ -13,15 +15,16 @@ const newOrder = async(req,res,next) => {
       shippingPrice,
       totalPrice,
       paidAt: Date.now(),
-      user: req.user._id,
+      user: req.body.user._id
     });
-
+    
         res.status(201).json({
         success: true,
         order,
     });
 
     } catch (error) {
+      console.log(error);
         res.status(500).json({message : error.message})
     }
 }
@@ -34,6 +37,7 @@ try {
           orders,
         });
 } catch (error) {
+  console.log("gfdgf")
   res.status(500).json({message : error.message})
 }
 }

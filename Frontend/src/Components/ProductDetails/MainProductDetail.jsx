@@ -90,11 +90,11 @@ export const MainProductDetail = () =>{
           <a href="">EMI option</a>
           <br />
           <br />
-          <img
+          {/* <img
             className="offer"
             src="https://ii2.pepperfry.com/media/wysiwyg/banners/Promo_Web_VIPCoupon_2X_05042022_nd.jpg"
             alt=""
-          />
+          /> */}
           <br />
           <br />
           <label htmlFor="">

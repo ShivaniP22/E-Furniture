@@ -82,55 +82,55 @@ const Hero = () => {
                     <img src="https://w0.peakpx.com/wallpaper/175/474/HD-wallpaper-stylish-modern-bedroom-interior-modern-design-white-brown-bedroom-large-bed.jpg" alt={"QueenSizeBeds"} />
                     <div className="upperText">Queen Size Beds</div>
                 </div>
-                <div onClick={()=>Navigate('StudyOffice') }>
+                <div onClick={()=>Navigate('/StudyOffice') }>
                     <img src="https://www.jiomart.com/images/product/original/rvtwmxhj3h/woodbuzz-marvel-study-table-ocean-green-frosty-white-product-images-orvtwmxhj3h-p599612174-0-202303200906.jpg?im=Resize=(360,360)" alt={"StudyTables"} />
                     <div className="upperText">Study Tables</div>
                 </div>
-                <div onClick={()=>Navigate('StudyOffice') } >
+                <div onClick={()=>Navigate('/StudyOffice') } >
                     <img src="https://woodbuzz.in/cdn/shop/products/walnut1_8aafa2ed-9ee7-4011-b149-49a2d20d6576_300x300.jpg?v=1674297127" alt={"PortableTables"} />
                     <div className="upperText">Portable Tables</div>
                 </div>
-                <div onClick={()=>Navigate('Chairs') }>
+                <div onClick={()=>Navigate('/Chairs') }>
                     <img src="https://media.istockphoto.com/id/1415964450/photo/gray-office-fabric-armchair-on-wheels-isolated-on-white-background-side-view.webp?b=1&s=170667a&w=0&k=20&c=sn29WMfjcQ9Zu7RfkFVWLUgiA0axGtzRh8_6OHF6UE0=" alt={"OfficeChairs"} />
                     <div className="upperText">Office Chairs</div>
                 </div>
             </Shoppee>
-            <h1>Ready For The New?</h1>
+            <h1>Ready For The New Arrivals?</h1>
             <New>
-                <div onClick={()=>Navigate('Sofas') }>
+                <div onClick={()=>Navigate('/Sofas') }>
                     <img src="https://5.imimg.com/data5/SELLER/Default/2022/12/EM/DW/VA/2733977/two-seater-sofa.jpg" alt={"Aelber"} />
                     <div className="upperText">Aelber Collection</div>
                     <div className="lowerText">So Plush</div>
                 </div>
-                <div onClick={()=>Navigate('StudyOffice') }> 
+                <div onClick={()=>Navigate('/StudyOffice') }> 
                     <img src="https://lushinteriors.co/cdn/shop/products/IMG_4423_600x.jpg?v=1692110138" alt={"Alabaster"} />
                     <div className="upperText">Alabaster Collection</div>
                     <div className="lowerText">Winsome Whites</div>
                 </div>
-                <div onClick={()=>Navigate('KidsRoom') }>
+                <div onClick={()=>Navigate('/KidsRoom') }>
                 <img src="https://i.pinimg.com/originals/71/b1/37/71b137f56174e6717fef11aba920927a.jpg" alt={"Alabaster"} />
                     <div className="upperText">Kids Collection</div>
                     <div className="lowerText">The Happiest Collection</div>
                 </div>
             </New>
-            <h1>Home Décor You Can't Ignore</h1>
+            <h1>Home Decor You Can't Ignore</h1>
             <HomeDecor>
-                <div onClick={()=>Navigate('Beds') }>
+                <div onClick={()=>Navigate('/Beds') }>
                     <img src="https://img1.exportersindia.com/product_images/bc-full/2021/3/6047400/double-bed-bedsheet-1616498805-5764796.jpeg" alt={"BedSheets"} />
                     <div className="upperText">Beds</div>
                     <div className="lowerText">Fresh & Breezy</div>
                 </div>
-                <div onClick={()=>Navigate('Decor') }>
+                <div onClick={()=>Navigate('/Decor') }>
                     <img src={decor} alt={"WallArt"} />
                     <div className="upperText">Decor for Corner</div>
                     <div className="lowerText">Oh So Glam</div>
                 </div>
-                <div onClick={()=>Navigate('Decor') }>
+                <div onClick={()=>Navigate('/Decor') }>
                     <img src="https://images-eu.ssl-images-amazon.com/images/I/81yvXYnuu3L._AC_UL750_SR750,750_.jpg" alt={"Figurines"} />
                     <div className="upperText">Figurines</div>
                     <div className="lowerText">Morden</div>
                 </div>
-                <div onClick={()=>Navigate('Chairs') }>
+                <div onClick={()=>Navigate('/Chairs') }>
                 <img src="https://img.freepik.com/premium-photo/old-vintage-luxury-chair-white-golden-frame_800563-3277.jpg" alt={"Figurines"} />
                     <div className="upperText">Royal Chair</div>
                     <div className="lowerText">Quick Makeovers</div>
@@ -140,7 +140,7 @@ const Hero = () => {
                 <div>
                     <h1>We’ve Got Your Style</h1><br/>
                     <p>Your home is a reflection of you. Nail your aesthetic with products our stylists love and recommend</p><br/>
-                    <div onClick={()=>Navigate('Decor') }  style={{color:"#ff7035"}}>View all Styles</div>
+                    <div onClick={()=>Navigate('/Decor') }  style={{color:"#ff7035"}}>View all Styles</div>
                 </div>
                 <div>
                     <img src="https://www.modfurn.com/wp-content/uploads/2021/10/Blue_01_HD-copy-min-e1633687480858.jpg" alt={"Modern"} />
@@ -160,20 +160,20 @@ const Hero = () => {
             </BlueBox>
             <h1>Top Products To Choose From</h1>
             <TopBrand>
-                <img onClick={()=>Navigate('Beds') } src={A} alt={"Industrial"} />
-                <img onClick={()=>Navigate('Chairs') } src={B} alt={"Industrial"} />
-                <img onClick={()=>Navigate('Decor') } src={C} alt={"Industrial"} />
-                <img onClick={()=>Navigate('KidsRoom') } src={D} alt={"Industrial"} />
-                <img onClick={()=>Navigate('StudyOffice') } src={E} alt={"Industrial"} />
-                <img onClick={()=>Navigate('Sofas') } src={F} alt={"Industrial"} />
+                <img onClick={()=>Navigate('/Beds') } src={A} alt={"Industrial"} />
+                <img onClick={()=>Navigate('/Chairs') } src={B} alt={"Industrial"} />
+                <img onClick={()=>Navigate('/Decor') } src={C} alt={"Industrial"} />
+                <img onClick={()=>Navigate('/KidsRoom') } src={D} alt={"Industrial"} />
+                <img onClick={()=>Navigate('/StudyOffice') } src={E} alt={"Industrial"} />
+                <img onClick={()=>Navigate('/Sofas') } src={F} alt={"Industrial"} />
 
 
             </TopBrand>
             <TwoBigImages>
-                <img onClick={()=>Navigate('Sofas') } src={Uniquesofa} alt={"ShopNowOne"}/>
-                <img onClick={()=>Navigate('Decor') } src={decor1} alt={"ShopNowTwo"}/>
+                <img onClick={()=>Navigate('/Sofas') } src={Uniquesofa} alt={"ShopNowOne"}/>
+                <img onClick={()=>Navigate('/Decor') } src={decor1} alt={"ShopNowTwo"}/>
             </TwoBigImages>
-            <ImageDiv>
+            {/* <ImageDiv>
                 <img src="https://ii1.pepperfry.com/images/hp_more_from_store_bg.jpg" alt={"SofaImage"}/>
                 <div className="textDiv">
                     <h1>More From The Store</h1><br/>
@@ -266,7 +266,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-            </ImageDiv>
+            </ImageDiv> */}
             <Costumers>
                 <h1>Happy Costumers, Happy Us</h1>
                 <div className="customerReviews">

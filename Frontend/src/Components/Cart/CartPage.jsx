@@ -45,16 +45,16 @@ const CartPage= () => {
             {/* PriceCard */}
             <Price />
 
-            <Emi>
+            {/* <Emi>
               <p>
                 No Cost EMI Available Starting <span> ₹ 63,184/month.</span>
                 EMI Starting <span>₹ 17,846/month</span>
               </p>
-            </Emi>
+            </Emi> */}
           </PriceContainer>
 
           <br />
-          <CheckBoxDiv>
+          {/* <CheckBoxDiv>
             <Flex>
               <Checkbox size="large" />
               <span>Contribute Rs.99 For COVID Relief Through GiveIndia.</span>
@@ -70,10 +70,10 @@ const CartPage= () => {
             <div className="bp">
               None Of The Items In Your Cart Are Available For Business Purchase
             </div>
-          </CheckBoxDiv>
+          </CheckBoxDiv> */}
 
           <Link to={`/address`}>
-            <Button>PLACE ORDER</Button>
+            <Button>Checkout</Button>
           </Link>
         </CartRight>
       </CartPageWrapper>
