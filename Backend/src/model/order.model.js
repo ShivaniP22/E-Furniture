@@ -14,7 +14,7 @@ const orderSchema = mongoose.Schema({
   orderItems: [
     {
       product: {
-        type: mongoose.Schema.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: "product",
       },
@@ -24,23 +24,24 @@ const orderSchema = mongoose.Schema({
       image: { type: String, required: true },
     },
   ],
-  user: { type: mongoose.Schema.ObjectId, required: true, ref: "user" },
+  user: { type: mongoose.Schema.Types.ObjectId, required: true, ref: "user" },
 
   paymentInfo: {
     id: {
       type: String,
-      required: true,
+      required: false,
+      default:"Cash on Delivery"
     },
 
     status: {
       type: String,
-      required: true,
+      required: false,
     },
 
   },
   paidAt: {
     type: Date,
-    required: true,
+    required: false,
   },
   itemsPrice: {
     type: Number,
@@ -49,12 +50,12 @@ const orderSchema = mongoose.Schema({
   },
   taxPrice: {
     type: Number,
-    required: true,
+    required: false,
     default: 0,
   },
   shippingPrice: {
     type: Number,
-    required: true,
+    required: false,
     default: 0,
   },
   totalPrice: {

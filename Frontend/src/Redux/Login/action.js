@@ -3,6 +3,8 @@ import {
   LOGIN_FAIL,
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
+  LOGOUT_REQUEST,
+  LOGOUT_SUCCESS,
   REGISTER_USER_FAIL,
   REGISTER_USER_REQUEST,
   REGISTER_USER_SUCCESS,
@@ -41,6 +43,23 @@ export const register =
       return { authenticated: true };
 
       dispatch({ type: REGISTER_USER_SUCCESS, payload: data.user });
+    } catch (error) {
+      return { error };
+      // dispatch({
+      //   type: REGISTER_USER_FAIL,
+      //   payload: error.response.data.message,
+      // });
+
+      //http://localhost:8000/api/v1/user/register
+    }
+  };
+
+  export const logout =() => async (dispatch) => {
+    try {
+      dispatch({ type: LOGOUT_REQUEST });
+      const config = { headers: { "Content-Type": "application/json" } };
+      return { authenticated: false };
+      dispatch({ type: LOGOUT_SUCCESS });
     } catch (error) {
       return { error };
       // dispatch({

@@ -77,7 +77,8 @@ export const Register = (props) => {
                    
                     setnvalid( setnvalid(<span style={{color:"blue",fontSize:"13px"}}>Registration successful</span>))
                     props.setTrig(false);
-                    setisAuthenticated = true;
+                    props.setLoggedIn(false);
+                    setisAuthenticated = false;
                   } else {
                    
                     // console.log(data.message)
@@ -127,7 +128,7 @@ export const Register = (props) => {
               name="mobileNumber"
               className="number"
             />
-            <button className="btn-num">VERIFY WITH OTP</button>
+            {/* <button className="btn-num">VERIFY WITH OTP</button> */}
             <br />
             <span style={{color:"red",fontSize:"13px"}}>{evalid}</span>
             <br />

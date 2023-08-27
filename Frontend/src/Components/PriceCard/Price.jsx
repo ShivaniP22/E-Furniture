@@ -44,7 +44,7 @@ const Price = ({cart}) => {
       setTotalItem(items);
       setPrice(price);
       setDiscount(discount);
-      setTotalPrice(totalPrice + 99 + 1500);
+      setTotalPrice(totalPrice);
     }, [cartItems]);
 
 
@@ -77,7 +77,7 @@ const Price = ({cart}) => {
               <div> ₹ 0 </div>
             </div>
 
-            <div className="cardDisplay">
+            {/* <div className="cardDisplay">
               <div>Assembly</div>
               <div>₹ 1500</div>
             </div>
@@ -85,7 +85,7 @@ const Price = ({cart}) => {
             <div className="cardDisplay">
               <div>GiveIndia</div>
               <div>₹ 99</div>
-            </div>
+            </div> */}
           </div>
 
           <Hr />

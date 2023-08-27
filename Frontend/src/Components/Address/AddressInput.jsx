@@ -5,12 +5,13 @@ import { Form, Button, AdressInputContainer } from "./AddressCSS";
 import { useNavigate } from "react-router-dom";
 import { saveShippingInfo } from "../../Redux/Cart/action"
 import { useSelector, useDispatch } from "react-redux";
-
+import axios from "axios";
 
 
 const AddressInput = () => {
-
-
+  const { cartItems } = useSelector((state) => state.cart);
+//   console.log("cartItems")
+// console.log(cartItems)
 
 let initialValue = {
   name: "",
@@ -39,6 +40,10 @@ const [filled,setFilled] = useState(false)
        setFilled(true);
        dispatch( saveShippingInfo(formData) );
      navigate("/checkout"); 
+
+     
+
+    
       
      }
 
