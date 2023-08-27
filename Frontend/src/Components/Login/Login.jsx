@@ -36,6 +36,7 @@ function Login(props) {
             localStorage.setItem("nm",data.user.name);
             localStorage.setItem("user",JSON.stringify(data.user));
             props.setTrig(false);
+            props.setLoggedIn(true);
             setisAuthenticated = true;
           } else {
             alert(data.message);

@@ -44,7 +44,7 @@ const MainProductList = () => {
 
       <ProductListHeading>
         <h1>Velvet Affairs</h1>
-        <button className="btn-f">Furniture</button>
+        {/* <button className="btn-f">Furniture</button> */}
       </ProductListHeading>
 
       <br />
@@ -52,11 +52,11 @@ const MainProductList = () => {
       <ProductListContainer>
         <span className="filter">
           <div className="sort">
-            <h4>Filter by</h4>
+            {/* <h4>Filter by</h4> */}
             {/* <br />
             <Button onClick={() => setBrand("")}>Clear</Button>
             <br /> */}
-            <input
+            {/* <input
               type="radio"
               name="money"
               value="50000"
@@ -112,7 +112,7 @@ const MainProductList = () => {
               value="Stories"
               onChange={(e) => setBrand(e.target.value)}
             />
-            <label htmlFor="Stories"> Stories</label>
+            <label htmlFor="Stories"> Stories</label> */}
           </div>
         </span>
         {products ? <div></div> : <div>No Items</div>}

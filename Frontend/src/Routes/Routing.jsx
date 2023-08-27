@@ -8,6 +8,7 @@ import { MainProductDetail } from '../Components/ProductDetails/MainProductDetai
 import MainProductList from '../Components/ProductList/MainProductList';
 import { MainAddress } from "../Components/Address/MainAddress";
 import Popup from "../Components/Login/Popup"
+import Logout from "../Components/Login/Logout"
 import Success from '../Components/SucessPage/Success';
 import CardPayment from '../Components/CardPayment/CardPayment';
 import Beds from '../Components/layout/Beds';

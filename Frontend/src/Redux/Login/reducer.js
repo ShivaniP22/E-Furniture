@@ -1,4 +1,4 @@
-import { LOGIN_REQUEST, LOGIN_FAIL, LOGIN_SUCCESS, REGISTER_USER_REQUEST, REGISTER_USER_FAIL, REGISTER_USER_SUCCESS } from "./actionType";
+import { LOGIN_REQUEST,LOGOUT_REQUEST,LOGOUT_SUCCESS, LOGIN_FAIL, LOGIN_SUCCESS, REGISTER_USER_REQUEST, REGISTER_USER_FAIL, REGISTER_USER_SUCCESS } from "./actionType";
 
 export const loginReducer = (state = { user: {} }, action) => {
   switch (action.type) {
@@ -9,7 +9,7 @@ export const loginReducer = (state = { user: {} }, action) => {
         loading: true,
         isAuthenticated: false,
       };
-
+    
     case LOGIN_SUCCESS:
       case REGISTER_USER_SUCCESS:
       // case LOAD_USER_SUCCESS:
@@ -19,13 +19,17 @@ export const loginReducer = (state = { user: {} }, action) => {
         isAuthenticated: true,
         user: action.payload,
       };
-
-    // case LOGOUT_SUCCESS:
-    //   return {
-    //     loading: false,
-    //     user: null,
-    //     isAuthenticated: false,
-    //   };
+      case LOGOUT_REQUEST:
+        return {
+          loading: false,
+          isAuthenticated: true,
+        };
+     case LOGOUT_SUCCESS:
+       return {
+         loading: false,
+         user: null,
+         isAuthenticated: false,
+       };
 
     case LOGIN_FAIL:
       case REGISTER_USER_FAIL:

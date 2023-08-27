@@ -47,15 +47,20 @@ function CardPayment(){
   
 
 const addToDb=()=>{
-  
+  const productArray = [];
+  cartItems.map((el) => {
+    var product = {"product":el.product,
+                  "name":el.name,
+                  "price":el.price,
+                  "quantity":el.quantity,
+                  "image":el.image
+                  };
+    productArray.push(product);
+
+    
+  });
  const body1 ={
-  "orderItems":[{"product":cartItems[0].product,
-                  "name":cartItems[0].name,
-                  "price":cartItems[0].price,
-                  "quantity":cartItems[0].quantity,
-                  "image":cartItems[0].image
-                  
-                }],
+    "orderItems":productArray,
                 "user":user,
                 "addressInfo":address,
                 "totalPrice":totalPrice-discount,
@@ -63,7 +68,6 @@ const addToDb=()=>{
 
 
  }
-  const body = {"orderItems":cartItems}
   axios
   .post("http://localhost:9000/api/v1/order/new",body1)
   .then((response) => {

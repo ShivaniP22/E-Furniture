@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {  useEffect } from 'react';
 import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNav, Nav, NavLogo, SearchBar, WholeNavbar} from './NavbarCSS';
 import Images from '../../Images/logo.png';
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
@@ -11,14 +11,35 @@ import "../Login/popup.css"
 import { MainLogin } from '../Login/Mainlogin';
 
 const Navbar = () => {
-  var user = JSON.parse(localStorage.getItem('userData'));
+  var user = JSON.parse(localStorage.getItem('user'));
   const [popup,popupTrig] = React.useState(false);
+  const [loggedIn,setLoggedIn] = React.useState(false);
+  console.log(user);
+  let [name,setName] = React.useState("");
+  
+  useEffect(() => {
+    // Update the document title using the browser API
+    var user = JSON.parse(localStorage.getItem('user'));
+    if(user != null){
+      setName(user.name);
+      setLoggedIn(true);
+    }
+  });
+
+  
+  
+  
   return (
     <>
       <Header>
         <Sale>
           <LeftText>Super Sale | Up to 60% Off | Use Code <span> Netcom </span></LeftText>
-          <RightText><span style={{fontSize:"20px",color:"black",fontStyle:"italic",backgroundColor:"white"}}>NAME: {localStorage.getItem("nm")}</span></RightText>
+          
+            <RightText>
+            <span style={{fontSize:"20px",color:"white",fontStyle:"italic"}}>{name}</span>
+            
+            </RightText>
+          
         </Sale>
       </Header>
     <WholeNavbar>
@@ -49,7 +70,7 @@ const Navbar = () => {
           </div>
         </TopNav>
         <div className='popup-div'>
-          <MainLogin trigger = {popup} setTrigger={popupTrig}/>
+          <MainLogin trigger = {popup} setTrigger={popupTrig} isLoggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>
         </div>
         <DropdownMenu />
       </Nav>

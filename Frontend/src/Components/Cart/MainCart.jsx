@@ -14,8 +14,7 @@ const MainCart = () => {
 
   return (
     <div>
-      <CheckoutNavbar />
-
+      
       {cartItems.length === 0 ? (
         <EmptyCart>
           <RemoveShoppingCartIcon className="icon" /> <br />
