@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, "Please Enter Your Name"],
-    minLength: 2,
+    minLength: 10,
   },
 
   mobileNumber: {
@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     minLength: 10,
     maxLength: 10,
     unique: true,
-   
+
   },
   email: {
     type: String,
